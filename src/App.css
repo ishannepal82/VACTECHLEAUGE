@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --text: #0f110e;
+    --background: #f7f9f6;
+    --primary: #77ab54;
+    --secondary: #b9db9e;
+    --accent: #96d869;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .dark {
+    --text: #eff1ee;
+    --background: #070906;
+    --primary: #77ab54;
+    --secondary: #3f6124;
+    --accent: #539627;
+  }
+
+  /* Custom Selction */
+  ::selection {
+    background-color: var(--primary);
+    color: #ffffff; 
+  }
+}
