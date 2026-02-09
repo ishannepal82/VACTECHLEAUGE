@@ -1,16 +1,12 @@
 import { 
-  LayoutDashboard, 
-  Map as MapIcon, 
-  Settings, 
-  BarChart3, 
   TrendingUp, 
   AlertCircle,
   Wind
 } from "lucide-react";
-import { Navbar } from "../components/Navbar";
-import { useState } from "react";
 import { Header } from "../components/Header";
 import MapComponent from "../components/map-tile";
+import Leaderboard  from "../components/leaderboard/leaderboard";
+import type { JSX } from "react";
 
 export default function Dashboard() {
   return (
@@ -21,7 +17,7 @@ export default function Dashboard() {
             <Header />
         </div>
         <main className="p-6 space-y-6">
-          {/* Header Section */}
+         
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <h2 className="text-2xl font-bold tracking-tight">Environmental Overview</h2>
@@ -83,6 +79,7 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
+          <Leaderboard />
         </main>
       </div>
     </div>
@@ -90,18 +87,8 @@ export default function Dashboard() {
 }
 
 
-function SidebarLink({ icon, label, active = false }: { icon: any, label: string, active?: boolean }) {
-  return (
-    <a href="#" className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all ${
-      active ? 'bg-primary text-white shadow-blue-200 shadow-lg' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'
-    }`}>
-      {icon}
-      {label}
-    </a>
-  );
-}
 
-function StatCard({ title, value, status, color, icon }: any) {
+function StatCard({ title, value, status, color, icon }: { title: string, value: string, status: string, color: string, icon: JSX.Element }) {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start justify-between">
       <div>

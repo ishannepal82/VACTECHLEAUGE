@@ -3,7 +3,6 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useEffect } from "react";
 
-// Fix for default Leaflet icon markers in Vite/React
 const icon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
@@ -21,7 +20,6 @@ interface MapProps {
   location: [number, number];
 }
 
-// Internal helper to handle map panning
 function MapUpdater({ center }: { center: [number, number] }) {
   const map = useMap();
   useEffect(() => {
@@ -43,7 +41,7 @@ export default function MapComponent({ routes, location }: MapProps) {
       center={location}
       zoom={13}
       className="h-full w-full z-0"
-      zoomControl={false} // Cleaner look
+      zoomControl={false} 
     >
       <TileLayer
         attribution='&copy; <a href="https://carto.com/">CARTO</a>'
@@ -52,12 +50,10 @@ export default function MapComponent({ routes, location }: MapProps) {
       
       <MapUpdater center={location} />
 
-      {/* User Location */}
       <Marker position={location} icon={icon}>
         <Popup>You are here</Popup>
       </Marker>
 
-      {/* Pollution Polylines */}
       {routes.map((route, idx) => (
         <Polyline 
           key={idx} 

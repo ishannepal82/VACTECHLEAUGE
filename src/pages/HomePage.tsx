@@ -4,7 +4,6 @@ import { Introduction } from '../components/Introduction'
 import { RouteComparison } from '../components/RouteComparison'
 import { Community } from '../components/Community'
 import { Leaderboard } from '../components/Leaderboard'
-import { CallToAction } from '../components/CallToAction'
 import { Footer } from '../components/Footer'
 
 export default function HomePage() {
@@ -16,7 +15,6 @@ export default function HomePage() {
       <RouteComparison />
       <Community />
       <Leaderboard />
-      <CallToAction />
       <Footer />
     </div>
   )

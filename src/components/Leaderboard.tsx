@@ -3,8 +3,8 @@ import { Award, MapPin, Trash2, TrendingUp } from "lucide-react";
 const leaders = [
   {
     rank: 1,
-    name: "Maria L.",
-    location: "São Paulo",
+    name: "Suman K.",
+    location: "Kathmandu",
     avatar: "🌿",
     points: 2840,
     reports: 47,
@@ -14,8 +14,8 @@ const leaders = [
   },
   {
     rank: 2,
-    name: "Jun K.",
-    location: "Seoul",
+    name: "Mina B.",
+    location: "Pokhara",
     avatar: "🌱",
     points: 2310,
     reports: 63,
@@ -25,8 +25,8 @@ const leaders = [
   },
   {
     rank: 3,
-    name: "Amara O.",
-    location: "Lagos",
+    name: "Ramesh S.",
+    location: "Biratnagar",
     avatar: "🍃",
     points: 1980,
     reports: 31,
@@ -36,8 +36,8 @@ const leaders = [
   },
   {
     rank: 4,
-    name: "Liam W.",
-    location: "London",
+    name: "Anita T.",
+    location: "Lalitpur",
     avatar: "🌳",
     points: 1720,
     reports: 29,
@@ -47,8 +47,8 @@ const leaders = [
   },
   {
     rank: 5,
-    name: "Priya S.",
-    location: "Delhi",
+    name: "Bikash M.",
+    location: "Bhaktapur",
     avatar: "🌻",
     points: 1540,
     reports: 52,
@@ -76,9 +76,7 @@ export function Leaderboard() {
           </p>
         </div>
 
-        {/* Leaderboard */}
         <div className="bg-white rounded-2xl shadow-lg shadow-secondary/30 border border-secondary overflow-hidden">
-          {/* Header */}
           <div className="px-6 py-4 border-b border-secondary/60 flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm font-medium text-text/70">
               <Award className="h-4 w-4 text-primary" strokeWidth={1.5} />
@@ -87,7 +85,6 @@ export function Leaderboard() {
             <span className="text-xs text-text/40">This month</span>
           </div>
 
-          {/* List */}
           <div className="divide-y divide-secondary/40">
             {leaders.map((leader) => (
               <div
@@ -96,7 +93,6 @@ export function Leaderboard() {
                   leader.highlight ? "bg-secondary/30" : ""
                 }`}
               >
-                {/* Rank */}
                 <div
                   className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
                     leader.rank === 1
@@ -111,12 +107,10 @@ export function Leaderboard() {
                   {leader.rank}
                 </div>
 
-                {/* Avatar */}
                 <div className="w-9 h-9 bg-secondary/50 rounded-full flex items-center justify-center text-lg shrink-0">
                   {leader.avatar}
                 </div>
 
-                {/* Info */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-sm text-text">
@@ -131,7 +125,6 @@ export function Leaderboard() {
                   </span>
                 </div>
 
-                {/* Stats */}
                 <div className="hidden sm:flex items-center gap-6 text-xs text-text/50">
                   <span className="flex items-center gap-1" title="Pollution reports">
                     <MapPin className="h-3 w-3" strokeWidth={1.5} />
@@ -143,7 +136,6 @@ export function Leaderboard() {
                   </span>
                 </div>
 
-                {/* Points */}
                 <div className="text-right shrink-0">
                   <div className="text-sm font-bold text-primary flex items-center gap-1">
                     <TrendingUp className="h-3 w-3" />
@@ -155,7 +147,6 @@ export function Leaderboard() {
             ))}
           </div>
 
-          {/* Footer */}
           <div className="px-6 py-4 border-t border-secondary/40 bg-secondary/15 text-center">
             <p className="text-xs text-text/40">
               Points are earned by reporting pollution, completing cleanups, and helping verify community data.

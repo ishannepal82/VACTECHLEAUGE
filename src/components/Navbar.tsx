@@ -36,10 +36,10 @@ export function Navbar() {
             Community
           </a>
           <a
-            href="#join"
+            href="/auth"
             className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:brightness-110 transition-all"
           >
-            Get early access
+            Sign Up
           </a>
         </div>
       </div>

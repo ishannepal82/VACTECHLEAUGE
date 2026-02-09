@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast, Toaster } from "sonner";
 import MapComponent from "../components/map-tile";
-import { Navbar } from "../components/Navbar";
 import { Header } from "../components/Header";
 
 type LocationState = {
